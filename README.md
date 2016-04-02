@@ -5,8 +5,8 @@ CRM Test is a Node.js test framework which calls Salesforce Rest API and create 
 CRM Test has driven from the idea of Testing as a Service. The intent is to support development of E2E scenarios using simple Node.Js scripts. 
 
 ###Tested OS
-Mac - OSX 10.11.1
-Ubuntu
+1. Mac - OSX 10.11.1, 
+2. Ubuntu
 
 ###Pre-requisites
 1. Follow the instructions at http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html to launch an Amazon instance with Ubuntu OS flavor.
@@ -41,9 +41,35 @@ Ubuntu
 15. Go to node_modules -> CrmTest 
 16. Execute the script by invoking **node crmtestclient.js**
 
-###
+###Tests
+1. First create the crmtest object
+  * var crmtest = require('./crmtest.js');
 
+2. Start Invoking supported crmtest methods. Currently crmtest support following features
+  * Get OAuth access Token: In order to get oAuth access token we should invoke the getoauth method
+    '''javascript
+    var response = crmtest.getoauth(
+		    baseUrl,
+		    "<<username>>",
+			"<<password>>",
+			"<<consumer secret>>",
+			"<<consumer key>>");
+    var accessToken = crmtest.parseresponse(response,"access_token");
 
+  * Here baseUrl is the instance url _for ex: https://na30.salesforce.com/_
+  * UserName is the username used to login to the org
+  * Password in order to login to the org
+  * Consumer Secret and Consumer Key can be fetched from the connected app home page.
+  * Once response is received one can parse the access token by invoking the parseresponse method and querying for access_token
+  
+3. Create an account record
+  '''javascript    
+  crmtest.createaccount("Account Name", accessToken);
+  
+  * To create an account one need to invoke createaccount method with the Account Name and accessToken received from the previous oAuth method.
+
+4. Insert 
+  
 ###FAQs
 1. I am getting invalid_grant when I am executing the oAuth method call, How to resolve it?
 A. The status invalid_grant depicts that the client machine from where you are trying to invoke the script is getting ip restricted by the org. To resolve this 
@@ -53,3 +79,9 @@ A. The status invalid_grant depicts that the client machine from where you are t
    4. Alternate approach is to search for Network access in Quick find box
    5. Add a range of ip address which will have your public ip address included
    6. Save it and try again.
+
+2. Which user should I be in order to execute this node module
+A. Ideally you should be the system admin of the org. 
+
+###License
+This is an open source initiative supported by ISC license https://opensource.org/licenses/ISC
