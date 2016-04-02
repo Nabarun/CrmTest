@@ -47,7 +47,8 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
 
 2. Start Invoking supported crmtest methods. Currently crmtest support following features
   * Get OAuth access Token: In order to get oAuth access token we should invoke the getoauth method
-    '''javascript
+
+    ```javascript
     var response = crmtest.getoauth(
 		    baseUrl,
 		    "<<username>>",
@@ -55,6 +56,7 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
 			"<<consumer secret>>",
 			"<<consumer key>>");
     var accessToken = crmtest.parseresponse(response,"access_token");
+    ```
 
   * Here baseUrl is the instance url _for ex: https://na30.salesforce.com/_
   * UserName is the username used to login to the org
@@ -63,9 +65,10 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
   * Once response is received one can parse the access token by invoking the parseresponse method and querying for access_token
   
 3. Create an account record
-  '''javascript    
+  ```javascript    
   crmtest.createaccount("Account Name", accessToken);
-  
+  ```
+
   * To create an account one need to invoke createaccount method with the Account Name and accessToken received from the previous oAuth method.
 
 4. Insert 
