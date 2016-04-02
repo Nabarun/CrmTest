@@ -94,6 +94,27 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
  
 _Note: Develop branch is the staging version whereas master is the release version._
 
+###Run crmtest in Amazon ec2
+1. Follow the tutorial and set up an instance http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
+2. CrmTest has been verified on the **Ubuntu** version of Amazon ec2
+3. Install the required Java binaries
+```bash
+**JDK**
+sudo apt-get install openjdk-8-jdk
+```
+```bash
+**JRE**
+sudo apt-get install openjdk-8-jre
+```
+4. Already Node and npm will be installed in the instance, if not follow the steps at [here](https://nodejs.org/en/download/package-manager/)
+5. Once Node is installed execute the following
+```node
+npm install java
+npm install crmtest
+```
+6. That's it your amazon ec2 should be ready to run Salesforce e2e tests.
+--In the FAQ section some common issues and troubleshoot approaches have been mentioned--
+
 ###FAQs
 1. I am getting invalid_grant when I am executing the oAuth method call, How to resolve it?
 A. The status invalid_grant depicts that the client machine from where you are trying to invoke the script is getting ip restricted by the org. To resolve this 
@@ -107,5 +128,14 @@ A. The status invalid_grant depicts that the client machine from where you are t
 2. Which user should I be in order to execute this node module
 A. Ideally you should be the system admin of the org. 
 
+3. I am getting an error NoClassDefFoundError: .... How to resolve it?
+A. Ideally all the jar files supported with this package should be in extracted state, but if it is not then you will get this error. To Troubleshoot this 
+   * Go to ScriptTestFramework.APIStore -> target -> classes.
+   * Extract the corresponding jar
+   --jar -xvf httpclient-4.5.2.jar--
+   * This will extract the content into org/ folder.
+   * Required packages are httpclient-4.5.2.jar, httpcore-4.4.4.jar, json-20160212.jar, commons-logging-1.2.jar, org.apache.httpcomponents.httpclient_4.4.1.jar
+   * There are some additional jars which are getting shipped for ongoing work support, and might not be needed.
+   
 ###License
 This is an open source initiative supported by ISC license https://opensource.org/licenses/ISC
