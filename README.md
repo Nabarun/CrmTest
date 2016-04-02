@@ -46,7 +46,7 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
   * var crmtest = require('./crmtest.js');
 
 2. Start Invoking supported crmtest methods. Currently crmtest support following features
-  * Get OAuth access Token: In order to get oAuth access token we should invoke the getoauth method
+  * **Get OAuth access Token** : In order to get oAuth access token we should invoke the getoauth method
 
     ```javascript
     var response = crmtest.getoauth(
@@ -64,7 +64,7 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
   * Consumer Secret and Consumer Key can be fetched from the connected app home page.
   * Once response is received one can parse the access token by invoking the parseresponse method and querying for access_token
   
-3. Create an account record
+3. **Create an account record**
   ```javascript    
   response = crmtest.createaccount("Account Name", accessToken);
   var fileId = crmtest.parseresponse(response,"id");
@@ -72,7 +72,7 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
   
   * To create an account one need to invoke createaccount method with the Account Name and accessToken received from the previous oAuth method.
   
-4. Upload a File in Chatter feed
+4. **Upload a File in Chatter feed**
   ```javascript
   response = crmtest.insertChatterFeedFile("/Users/Documents/pdf.pdf", "File Name","Title", accessToken);
   var fileId = crmtest.parseresponse(response,"id");
@@ -84,7 +84,7 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
   * Fourth will be the oauth accesstoken
   * Once the response is recieved it can be parsed through and corresponding file id of the uploaded file can be retrieved.
    
-5. Get the status of File rendition
+5. **Get the status of File rendition**
   ```javascript
   response = crmtest.fileavailability(fileId,"thumbnail", accessToken);
   var staus = crmtest.parseresponse(response, "status")
