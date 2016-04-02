@@ -66,13 +66,34 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
   
 3. Create an account record
   ```javascript    
-  crmtest.createaccount("Account Name", accessToken);
+  response = crmtest.createaccount("Account Name", accessToken);
+  var fileId = crmtest.parseresponse(response,"id");
   ```
-
-  * To create an account one need to invoke createaccount method with the Account Name and accessToken received from the previous oAuth method.
-
-4. Insert 
   
+  * To create an account one need to invoke createaccount method with the Account Name and accessToken received from the previous oAuth method.
+  
+4. Upload a File in Chatter feed
+  ```javascript
+  response = crmtest.insertChatterFeedFile("/Users/Documents/pdf.pdf", "File Name","Title", accessToken);
+  var fileId = crmtest.parseresponse(response,"id");
+  ```
+  * In order to upload a file in chatter insertchatterfeedwithfile method is invoked
+  * First parameter is the file location
+  * Second parameter will be the file name
+  * Third will be the file title
+  * Fourth will be the oauth accesstoken
+  * Once the response is recieved it can be parsed through and corresponding file id of the uploaded file can be retrieved.
+   
+5. Get the status of File rendition
+  ```javascript
+  response = crmtest.fileavailability(fileId,"thumbnail", accessToken);
+  var staus = crmtest.parseresponse(response, "status")
+  ```
+  * After uploading the file in chatter feed it should spawn up rendition thread
+  * Status of rendition can be verified by parsing through the response for status key.
+ 
+_Note: Develop branch is the staging version whereas master is the release version._
+
 ###FAQs
 1. I am getting invalid_grant when I am executing the oAuth method call, How to resolve it?
 A. The status invalid_grant depicts that the client machine from where you are trying to invoke the script is getting ip restricted by the org. To resolve this 
