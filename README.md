@@ -107,6 +107,7 @@ sudo apt-get install openjdk-8-jdk
 sudo apt-get install openjdk-8-jre
 ```
 4 Already Node and npm will be installed in the instance, if not follow the steps at [here](https://nodejs.org/en/download/package-manager/)
+
 5 Once Node is installed execute the following
 ```node
 npm install java
