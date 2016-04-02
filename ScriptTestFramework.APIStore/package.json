@@ -1,0 +1,26 @@
+{
+  "name": "crmtest",
+  "version": "1.0.11",
+  "description": "Salesforce ScriptTest Framework using Node.JS",
+  "main": "scripttest.js",
+  "dependencies": {
+    "java": "^0.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Salesforce"
+  ],
+  "bugs": {
+    "url": "https://github.com/Nabarun/CrmTest/issues"
+  },
+  "homepage": "https://github.com/Nabarun/CrmTest#readme",
+  "author": "Nabarun Sengupta",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nabarun/CrmTest.git"
+  }
+}
