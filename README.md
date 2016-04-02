@@ -95,9 +95,9 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
 _Note: Develop branch is the staging version whereas master is the release version._
 
 ###Run crmtest in Amazon ec2
-1. Follow the tutorial and set up an instance http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
-2. CrmTest has been verified on the **Ubuntu** version of Amazon ec2
-3. Install the required Java binaries
+1 Follow the tutorial and set up an instance http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
+2 CrmTest has been verified on the **Ubuntu** version of Amazon ec2
+3 Install the required Java binaries
 ```bash
 **JDK**
 sudo apt-get install openjdk-8-jdk
@@ -106,13 +106,13 @@ sudo apt-get install openjdk-8-jdk
 **JRE**
 sudo apt-get install openjdk-8-jre
 ```
-4. Already Node and npm will be installed in the instance, if not follow the steps at [here](https://nodejs.org/en/download/package-manager/)
-5. Once Node is installed execute the following
+4 Already Node and npm will be installed in the instance, if not follow the steps at [here](https://nodejs.org/en/download/package-manager/)
+5 Once Node is installed execute the following
 ```node
 npm install java
 npm install crmtest
 ```
-6. That's it your amazon ec2 should be ready to run Salesforce e2e tests.
+6 That's it your amazon ec2 should be ready to run Salesforce e2e tests.
 --In the FAQ section some common issues and troubleshoot approaches have been mentioned--
 
 ###FAQs
