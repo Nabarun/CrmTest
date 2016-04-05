@@ -96,10 +96,6 @@ _Note: Develop branch is the staging version whereas master is the release versi
 
 6. **Send the generated thumbnail preview from file rendition to Microsoft's cognitive api and get image analytics**
   ```javascript
-  //Analyze preview image
-  console.log("-------------------------------------------------------------");
-  console.log("-----------Analyze the generated file preview----------------")
-  console.log("-------------------------------------------------------------");
   response = crmtest.analyzeimage(fileId, "<<Microsoft cognitive api key>>", accessToken);
   console.log(response+'\n');
   ```
