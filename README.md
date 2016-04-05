@@ -94,6 +94,19 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
  
 _Note: Develop branch is the staging version whereas master is the release version._
 
+6. **Send the generated thumbnail preview from file rendition to Microsoft's cognitive api and get image analytics**
+  ```javascript
+  //Analyze preview image
+  console.log("-------------------------------------------------------------");
+  console.log("-----------Analyze the generated file preview----------------")
+  console.log("-------------------------------------------------------------");
+  response = crmtest.analyzeimage(fileId, "<<Microsoft cognitive api key>>", accessToken);
+  console.log(response+'\n');
+  ```
+  * Once file preview are generated, in order to get more analytics out of that send the fileId to the analyzeimage call with the Microsoft's cognitive api and accessToken
+  * Raw Image is read from the chatter api and passed to the Microsoft's cognitive api.
+  _Note: Microsoft is not going to store the images as per its documentation_
+
 ###Run crmtest in Amazon ec2
 1 Follow the tutorial and set up an instance http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
 2 CrmTest has been verified on the **Ubuntu** version of Amazon ec2
