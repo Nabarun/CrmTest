@@ -84,8 +84,8 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
   * Fourth will be the oauth accesstoken
   * Once the response is recieved it can be parsed through and corresponding file id of the uploaded file can be retrieved.
    
-5. **Get the status of File rendition**
-  ```javascript
+5. **Get the status of File rendition*
+   ```javascript
   response = crmtest.fileavailability(fileId,"thumbnail", accessToken);
   var staus = crmtest.parseresponse(response, "status")
   ```
