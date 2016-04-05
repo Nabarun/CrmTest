@@ -85,6 +85,7 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
   * Once the response is recieved it can be parsed through and corresponding file id of the uploaded file can be retrieved.
    
 5. **Get the status of File rendition*
+6. **Send the generated thumbnail preview from file rendition to Microsoft's cognitive api and get image analytics**
    ```javascript
   response = crmtest.fileavailability(fileId,"thumbnail", accessToken);
   var staus = crmtest.parseresponse(response, "status")
@@ -92,9 +93,8 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
   * After uploading the file in chatter feed it should spawn up rendition thread
   * Status of rendition can be verified by parsing through the response for status key.
  
-_Note: Develop branch is the staging version whereas master is the release version._
+  _Note: Develop branch is the staging version whereas master is the release version._
 
-6. **Send the generated thumbnail preview from file rendition to Microsoft's cognitive api and get image analytics**
   ```javascript
   response = crmtest.analyzeimage(fileId, "<<Microsoft cognitive api key>>", accessToken);
   console.log(response+'\n');
