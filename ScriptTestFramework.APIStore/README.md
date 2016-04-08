@@ -127,7 +127,6 @@ var fileId = crmtest.parseresponse(response,"id");
   * The file uploaded in Azure container is downloaded as bytearray and then uploaded as a ContentBody to the Chatter Feed api
   * To access the file, one need to provide, storage account name, storage account key, container name. All of these can be fetched from azure portal
   * Once the file is uploaded to the chatter feed the json response can be parsed and corresponding file id can be fetched
-  * 
   
 ##Run crmtest in Amazon ec2
 1 Follow the tutorial and set up an instance http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
