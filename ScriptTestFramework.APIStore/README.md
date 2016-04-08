@@ -94,6 +94,41 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
  
 _Note: Develop branch is the staging version whereas master is the release version._
 
+4 **Get the status of File rendition**
+  ```javascript
+  response = crmtest.fileavailability(fileId,"thumbnail", accessToken);
+  var staus = crmtest.parseresponse(response, "status")
+  ```
+  * After uploading the file in chatter feed it should spawn up rendition thread
+  * Status of rendition can be verified by parsing through the response for status key.
+
+_Note: Develop branch is the staging version whereas master is the release version._
+
+5 **Send the generated thumbnail preview from file rendition to Microsoft's cognitive api and get image analytics**
+  ```javascript
+  response = crmtest.analyzeimage(fileId, "<<Microsoft cognitive api key>>", accessToken);
+  console.log(response+'\n');
+  ```
+  * Once file preview are generated, in order to get more analytics out of that send the fileId to the analyzeimage call with the Microsoft's cognitive api and accessToken
+  * Raw Image is read from the chatter api and passed to the Microsoft's cognitive api.
+  _Note: Microsoft is not going to store the images as per its documentation_
+
+6 **Upload a file from Azure container into Salesforce Chatter feed**
+  ```javascript
+response = crmtest.getazureblob(
+                "<<azure storage account name>>",
+                "<<azure storage account key>>",
+                "<<azure container name>>",
+                "<<fileName>>",
+                "<<file Description/ FeedText>>", accessToken);
+console.log(response+'\n');
+var fileId = crmtest.parseresponse(response,"id");
+  ```
+  * The file uploaded in Azure container is downloaded as bytearray and then uploaded as a ContentBody to the Chatter Feed api
+  * To access the file, one need to provide, storage account name, storage account key, container name. All of these can be fetched from azure portal
+  * Once the file is uploaded to the chatter feed the json response can be parsed and corresponding file id can be fetched
+  * 
+  
 ##Run crmtest in Amazon ec2
 1 Follow the tutorial and set up an instance http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
 2 CrmTest has been verified on the **Ubuntu** version of Amazon ec2
