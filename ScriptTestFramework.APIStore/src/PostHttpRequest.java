@@ -40,5 +40,13 @@ public class PostHttpRequest extends MainHttpRequest implements Observer{
 				String fileId = (String) request.execute(fileDetails);
 				this.setResponse(fileId);
 			}
+			
+			if(this.getMethodCall().equals(Constants.IdentifierAnalysisImage)){
+				ModelAnalysisImage imageObject = (ModelAnalysisImage)arg;
+				
+				MasterRequest request = new AnalyzeImageRequest();
+				String response = (String) request.execute(imageObject);
+				this.setResponse(response);
+			}
 	}
 }

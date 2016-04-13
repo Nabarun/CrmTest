@@ -19,5 +19,12 @@ public class GetHttpRequest extends MainHttpRequest implements Observer{
 
 			 setResponse(request.execute(chatterObj));
 		}
+		
+		if(this.getMethodCall().equals(Constants.IdentifierAzureStorageGetBlob)){
+			MasterRequest request = new AzureStorageRequest();
+			ModelAzureStorage azureObject = (ModelAzureStorage)arg;
+			
+			setResponse(request.execute(azureObject));
+		}
 	}
 }
