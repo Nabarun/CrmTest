@@ -26,5 +26,11 @@ public class GetHttpRequest extends MainHttpRequest implements Observer{
 			
 			setResponse(request.execute(azureObject));
 		}
+		
+		if(this.getMethodCall().equals(Constants.IdentifierRecommendUserToFollow)){
+			MasterRequest request = new RecommendMeToFollowRequest();
+			
+			setResponse(request.execute(arg));
+		}
 	}
 }

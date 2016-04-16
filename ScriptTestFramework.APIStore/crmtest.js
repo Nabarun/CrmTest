@@ -56,3 +56,44 @@ exports.parseresponse = function(response, filter){
 	
 	return filteredResponse.executeSync(response, filter);
 }
+
+/*
+ * Get Analysis from Preview image
+ */
+exports.analyzeimage = function(fileId, cognitiveKey, accessToken){
+
+	var imageObject = java.import('AnalyzeImageCommand');
+	
+	var analysis = imageObject.executeSync(fileId, cognitiveKey, "analysis", accessToken);
+	return analysis;
+}
+
+/*
+ * Get Topics from Preview image
+ */
+exports.suggesttopicsinimage = function(fileId, cognitiveKey, accessToken){
+	var imageObject = java.import('AnalyzeImageCommand');
+	
+	var topics = imageObject.executeSync(fileId, cognitiveKey, "topics", accessToken);
+	return topics;
+}
+
+/*
+ * Get the File from Azure blob container and upload it in Salesforce chatter feed
+ */
+exports.getazureblob = function(azureStorageAccountName, azureStorageAccountKey, containerName, fileName, feedText, accessToken){
+	var azureObject = java.import('AzureStorageCommand');
+	
+	var response = azureObject.executeSync(azureStorageAccountName, azureStorageAccountKey, containerName, fileName, feedText, accessToken);
+	return response;
+}
+
+/*
+ * Get the Recommended users to Follow
+ */
+exports.getrecommendeduserstofollow = function(accessToken){
+	var recommendObject = java.import('RecommendMeToFollowCommand');
+	
+	var response = recommendObject.recommendMeToFollow(accessToken);
+	return response;
+}

@@ -6,6 +6,7 @@ public class Constants {
 	public static String CreateANewAccountRecord = "services/data/v36.0/sobjects/Account/";
 	public static String InsertNewDocument = "services/data/v25.0/chatter/feeds/news/me/feed-items";
 	public static String RenditionEndpoint = "services/data/v29.0/chatter/files/%s/rendition?type=THUMB120BY90";
+	public static String RecommendMeToFollowEndpoint="services/data/v36.0/chatter/users/me/recommendations/follow/users";
 	
 	public static String FeedItemFileUpload ="feedItemFileUpload";
 	public static String FeedItemFileName = "fileName";
@@ -17,6 +18,7 @@ public class Constants {
 	public static String IdentifierInsertFileInNewsFeed = "InsertFileInNewsFeed";
 	public static String IdentifierAnalysisImage = "ImageAnalysis";
 	public static String IdentifierAzureStorageGetBlob = "GetAzureStorageBlob";
+	public static String IdentifierRecommendUserToFollow = "RecommendMeToFollow";
 	
 	public static String MicrosoftCognitiveAnalysisApiUrl = "https://api.projectoxford.ai/vision/v1.0/analyze?visualFeatures=Description,Tags";
 	public static String IMageAnalysisResponseMainNode ="categories";
