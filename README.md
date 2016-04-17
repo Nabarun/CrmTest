@@ -44,6 +44,8 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
 ###Tests
 1. First create the crmtest object
   * var crmtest = require('./crmtest.js');
+  * Some sample scripts are at CrmTest/TestScripts/ which can be refered
+  
 
 2. Start Invoking supported crmtest methods. Currently crmtest support following features
   * **Get OAuth access Token** : In order to get oAuth access token we should invoke the getoauth method
