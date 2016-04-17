@@ -8,6 +8,6 @@
 	<classpathentry kind="lib" path="/Users/nabarunsengupta/Documents/workspace/ScriptTestFramework.APIStore/target/classes/httpcore-4.4.4.jar"/>
 	<classpathentry kind="lib" path="/Users/nabarunsengupta/Documents/workspace/ScriptTestFramework.APIStore/target/classes/json-20160212.jar"/>
 	<classpathentry kind="lib" path="/Users/nabarunsengupta/Documents/workspace/ScriptTestFramework.APIStore/target/classes/org.apache.httpcomponents.httpclient_4.4.1.jar"/>
-	<classpathentry kind="lib" path="/Users/nabarunsengupta/git/CrmTest/ScriptTestFramework.APIStore/lib/azure-storage-4.0.0.jar"/>
+	<classpathentry kind="lib" path="/Users/nabarunsengupta/git/main/CrmTest/ScriptTestFramework.APIStore/lib/azure-storage-4.0.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

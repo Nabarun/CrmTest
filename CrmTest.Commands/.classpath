@@ -7,5 +7,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/CrmTest.Common"/>
 	<classpathentry kind="lib" path="/Users/nabarunsengupta/Documents/workspace/ScriptTestFramework.APIStore/target/classes/json-20160212.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/CrmTest.RequestTypeInterface"/>
+	<classpathentry kind="lib" path="/Users/nabarunsengupta/git/main/CrmTest/ScriptTestFramework.APIStore/lib/azure-storage-4.0.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
