@@ -10,12 +10,11 @@ java.classpath.push('./CrmTest/CrmTest.Common/bin');
 java.classpath.push('./CrmTest/CrmTest.ModelClasses/bin');
 java.classpath.push('./CrmTest/CrmTest.RequestLogic/bin');
 java.classpath.push('./CrmTest/CrmTest.RequestTypes/bin');
-
+java.classpath.push('./CrmTest/CrmTest.RequestTypeInterface/bin');
 /*
  * GetOAuth Token
  */
 exports.getoauth= function(baseUrl, username, password, clientsecret, clientid){
-		loadjars();
 		var loginCommand = java.import('LoginCommand');
 		var oAuth = loginCommand.executeSync(baseUrl, username, password,clientsecret,clientid);
 		
