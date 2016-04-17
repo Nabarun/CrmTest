@@ -22,8 +22,8 @@ console.log(accessToken);
 console.log('\n');
 
 //Create an account
-console.log("------------------------------------th————————————“);
-console.log("-------------------Account Creation--------------------------")
+console.log("-------------------------------------------------------------");
+console.log("-------------------Account Creation--------------------------");
 console.log("-------------------------------------------------------------");
 response = crmtest.createaccount("Sample Account", accessToken);
 console.log(response+'\n');
