@@ -42,7 +42,7 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
 16. Execute the script by invoking **node crmtestclient.js**
 
 ###Tests
-1. Browse to lib folder and unjar all the jar files at some destination folder. If you refer to crmtest.js I had my lib extracted to taget/classes.
+1. Browse to lib folder and unjar all the jar files at some destination folder. If you refer to ###crmtest.js I had my lib extracted to taget/classes.
   * java.classpath.push('./CrmTest/target/classes'); is the reference to the location.
   * In addition to this, your classpath should also have the references of class files for all the other projects.
   * Similar to the following:
@@ -53,6 +53,8 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
     * java.classpath.push('./CrmTest/CrmTest.RequestLogic/bin');
     * java.classpath.push('./CrmTest/CrmTest.RequestTypes/bin');
     * java.classpath.push('./CrmTest/CrmTest.RequestTypeInterface/bin');
+
+Note: All the above reference is already mentioned in crmtest.js. If you are changing the project hierarchy this is something you need to consider.
 
 2. Create the crmtest object
   * var crmtest = require('./crmtest.js');
