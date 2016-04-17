@@ -45,14 +45,14 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
 1. Browse to lib folder and unjar all the jar files at some destination folder. If you refer to crmtest.js I had my lib extracted to taget/classes.
   * java.classpath.push('./CrmTest/target/classes'); is the reference to the location.
   * In addition to this, your classpath should also have the references of class files for all the other projects.
-  * Similar to the following
-   ** java.classpath.push('./CrmTest/CrmTest.Api/bin');
-   ** java.classpath.push('./CrmTest/CrmTest.Commands/bin');
-   ** java.classpath.push('./CrmTest/CrmTest.Common/bin');
-   ** java.classpath.push('./CrmTest/CrmTest.ModelClasses/bin');
-   ** java.classpath.push('./CrmTest/CrmTest.RequestLogic/bin');
-   ** java.classpath.push('./CrmTest/CrmTest.RequestTypes/bin');
-   ** java.classpath.push('./CrmTest/CrmTest.RequestTypeInterface/bin');
+  * Similar to the following:
+    * java.classpath.push('./CrmTest/CrmTest.Api/bin');
+    * java.classpath.push('./CrmTest/CrmTest.Commands/bin');
+    * java.classpath.push('./CrmTest/CrmTest.Common/bin');
+    * java.classpath.push('./CrmTest/CrmTest.ModelClasses/bin');
+    * java.classpath.push('./CrmTest/CrmTest.RequestLogic/bin');
+    * java.classpath.push('./CrmTest/CrmTest.RequestTypes/bin');
+    * java.classpath.push('./CrmTest/CrmTest.RequestTypeInterface/bin');
 
 2. Create the crmtest object
   * var crmtest = require('./crmtest.js');
