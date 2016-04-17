@@ -42,12 +42,24 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
 16. Execute the script by invoking **node crmtestclient.js**
 
 ###Tests
-1. First create the crmtest object
+1. Browse to lib folder and unjar all the jar files at some destination folder. If you refer to crmtest.js I had my lib extracted to taget/classes.
+  * java.classpath.push('./CrmTest/target/classes'); is the reference to the location.
+  * In addition to this, your classpath should also have the references of class files for all the other projects.
+  * Similar to the following
+   ** java.classpath.push('./CrmTest/CrmTest.Api/bin');
+   ** java.classpath.push('./CrmTest/CrmTest.Commands/bin');
+   ** java.classpath.push('./CrmTest/CrmTest.Common/bin');
+   ** java.classpath.push('./CrmTest/CrmTest.ModelClasses/bin');
+   ** java.classpath.push('./CrmTest/CrmTest.RequestLogic/bin');
+   ** java.classpath.push('./CrmTest/CrmTest.RequestTypes/bin');
+   ** java.classpath.push('./CrmTest/CrmTest.RequestTypeInterface/bin');
+
+2. Create the crmtest object
   * var crmtest = require('./crmtest.js');
   * Some sample scripts are at CrmTest/TestScripts/ which can be refered
   
 
-2. Start Invoking supported crmtest methods. Currently crmtest support following features
+3. Start Invoking supported crmtest methods. Currently crmtest support following features
   * **Get OAuth access Token** : In order to get oAuth access token we should invoke the getoauth method
 
     ```javascript
@@ -66,7 +78,7 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
   * Consumer Secret and Consumer Key can be fetched from the connected app home page.
   * Once response is received one can parse the access token by invoking the parseresponse method and querying for access_token
   
-3. **Create an account record**
+4. **Create an account record**
   ```javascript    
   response = crmtest.createaccount("Account Name", accessToken);
   var fileId = crmtest.parseresponse(response,"id");
@@ -74,7 +86,7 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
   
   * To create an account one need to invoke createaccount method with the Account Name and accessToken received from the previous oAuth method.
   
-4. **Upload a File in Chatter feed**
+5. **Upload a File in Chatter feed**
   ```javascript
   response = crmtest.insertChatterFeedFile("/Users/Documents/pdf.pdf", "File Name","Title", accessToken);
   var fileId = crmtest.parseresponse(response,"id");
@@ -86,7 +98,7 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
   * Fourth will be the oauth accesstoken
   * Once the response is recieved it can be parsed through and corresponding file id of the uploaded file can be retrieved.
    
-5. **Get the status of File rendition**
+6. **Get the status of File rendition**
    ```javascript
   response = crmtest.fileavailability(fileId,"thumbnail", accessToken);
   var staus = crmtest.parseresponse(response, "status")
@@ -96,7 +108,7 @@ CRM Test has driven from the idea of Testing as a Service. The intent is to supp
  
   Note: Develop branch is the staging version whereas master is the release version.
   
-6. **Send the generated thumbnail preview from file rendition to Microsoft's cognitive api and get image analytics**
+7. **Send the generated thumbnail preview from file rendition to Microsoft's cognitive api and get image analytics**
   ```javascript
   response = crmtest.analyzeimage(fileId, "<<Microsoft cognitive api key>>", accessToken);
   console.log(response+'\n');
