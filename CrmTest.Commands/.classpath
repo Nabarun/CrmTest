@@ -7,10 +7,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/CrmTest.Common"/>
 	<classpathentry kind="lib" path="/Users/nabarunsengupta/Documents/workspace/ScriptTestFramework.APIStore/target/classes/json-20160212.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/CrmTest.RequestTypeInterface"/>
-<<<<<<< HEAD
 	<classpathentry kind="lib" path="/Users/nabarunsengupta/crmtestrepo/CrmTest/lib/azure-storage-4.0.0.jar"/>
-=======
-	<classpathentry kind="lib" path="/Users/nabarunsengupta/crmrepo/CrmTest/lib/azure-storage-4.0.0.jar"/>
->>>>>>> 4f512a73f2a0cadcfda1f323c7fb56c3c73f1d32
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,11 +1,6 @@
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
-<<<<<<< HEAD
-=======
-import java.net.URL;
-
->>>>>>> 4f512a73f2a0cadcfda1f323c7fb56c3c73f1d32
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -13,11 +8,8 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
-<<<<<<< HEAD
-=======
 import org.json.JSONObject;
 import org.json.JSONTokener;
->>>>>>> 4f512a73f2a0cadcfda1f323c7fb56c3c73f1d32
 
 public class ChatterFilePreviewRequest extends MasterRequest{
 	

@@ -19,17 +19,12 @@ public class OAuthAuthentication implements OauthApiInterface{
 	
 	protected ArrayList<ArgumentPair> getArgumentPair(ModelOAuthDetails detailObject){
 		ArrayList<ArgumentPair> args = new ArrayList<ArgumentPair>();
-<<<<<<< HEAD
+
 		args.add(new Argument<String, String>("client_id", detailObject.getClientId()));
 		args.add(new Argument<String, String>("client_secret", detailObject.getClientSecret()));
 		args.add(new Argument<String, String>("username", detailObject.getUserName()));
 		args.add(new Argument<String, String>("password", detailObject.getPassword()));
-=======
-		args.add(new Argument("client_id", detailObject.getClientId()));
-		args.add(new Argument("client_secret", detailObject.getClientSecret()));
-		args.add(new Argument("username", detailObject.getUserName()));
-		args.add(new Argument("password", detailObject.getPassword()));
->>>>>>> 4f512a73f2a0cadcfda1f323c7fb56c3c73f1d32
+
 		return args;
 	}
 	
