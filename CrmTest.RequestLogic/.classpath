@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CrmTest.Common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CrmTest.ModelClasses"/>
+	<classpathentry kind="lib" path="/Users/nabarunsengupta/Documents/workspace/ScriptTestFramework.APIStore/target/classes/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="/Users/nabarunsengupta/Documents/workspace/ScriptTestFramework.APIStore/target/classes/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="/Users/nabarunsengupta/Documents/workspace/ScriptTestFramework.APIStore/target/classes/json-20160212.jar"/>
+	<classpathentry kind="lib" path="/Users/nabarunsengupta/Documents/workspace/ScriptTestFramework.APIStore/target/classes/org.apache.httpcomponents.httpclient_4.4.1.jar"/>
+	<classpathentry kind="lib" path="/Users/nabarunsengupta/crmtestrepo/CrmTest/lib/azure-storage-4.0.0.jar"/>
+	<classpathentry kind="lib" path="/Users/nabarunsengupta/crmtestrepo/CrmTest/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
