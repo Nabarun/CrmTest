@@ -8,7 +8,11 @@
 	<classpathentry kind="lib" path="/Users/nabarunsengupta/Documents/workspace/ScriptTestFramework.APIStore/target/classes/httpcore-4.4.4.jar"/>
 	<classpathentry kind="lib" path="/Users/nabarunsengupta/Documents/workspace/ScriptTestFramework.APIStore/target/classes/json-20160212.jar"/>
 	<classpathentry kind="lib" path="/Users/nabarunsengupta/Documents/workspace/ScriptTestFramework.APIStore/target/classes/org.apache.httpcomponents.httpclient_4.4.1.jar"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="/Users/nabarunsengupta/crmtestrepo/CrmTest/lib/azure-storage-4.0.0.jar"/>
 	<classpathentry kind="lib" path="/Users/nabarunsengupta/crmtestrepo/CrmTest/lib/commons-logging-1.2.jar"/>
+=======
+	<classpathentry kind="lib" path="/Users/nabarunsengupta/crmrepo/CrmTest/lib/azure-storage-4.0.0.jar"/>
+>>>>>>> 4f512a73f2a0cadcfda1f323c7fb56c3c73f1d32
 	<classpathentry kind="output" path="bin"/>
 </classpath>
